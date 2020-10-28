@@ -1,16 +1,15 @@
 import json
 import codecs
-import os.path
-
+import os
+import sys
+ 
 try:
     from instagram_private_api import (
         Client, ClientError, ClientLoginError,
         ClientCookieExpiredError, ClientLoginRequiredError,
         __version__ as client_version)
 except ImportError:
-    import sys
-
-    sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+    sys.path.append('./venv/Lib/site-packages/')
     from instagram_private_api import (
         Client, ClientError, ClientLoginError,
         ClientCookieExpiredError, ClientLoginRequiredError,

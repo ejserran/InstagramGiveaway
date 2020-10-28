@@ -3,14 +3,14 @@ import os.path
 import logging
 import argparse
 import auth
+import sys
 try:
     from instagram_private_api import (
         Client, __version__ as client_version)
     from instagram_web_api import (
         Client, __version__ as web_client_version)
 except ImportError:
-    import sys
-    sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+    sys.path.append('./vevn/Lib/site-packages/')
     from instagram_private_api import (
         Client, __version__ as client_version)
     from instagram_web_api import (
